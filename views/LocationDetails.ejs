@@ -1,0 +1,32 @@
+<a class="add-btn" href="/locations/add"><i class="fas fa-plus"></i></a>
+<div class="container2">
+    <h1>Location Details</h1>
+    <ul class="responsive-table">
+      <li class="table-header">
+        <!-- <div class="col col-7">Id</div> -->
+        <div class="col col-8">Location Name</div>
+        <div class="col col-9">City</div>
+        <div class="col col-10">District</div>
+        <div class="col col-11">State</div>
+        <div class="col col-12">Description</div>
+        <div class="col col-13"></div>
+      </li>
+      <% data.forEach(location => { %>
+        <li class="table-row">
+          <!-- <div class="col col-7" data-label="Id"><%= location.location_id %></div> -->
+          <div class="col col-8" data-label="Location Name"><%= location.name %></div>
+          <div class="col col-9" data-label="City"><%= location.city %></div>
+          <div class="col col-10" data-label="District"><%= location.district %></div>
+          <div class="col col-11" data-label="State"><%= location.state %></div>
+          <div class="col col-12" data-label="Description"><%= location.description.substring(0,25) + "..." %></div>
+
+          <div class="col col-13">
+            <a href="/locations/<%= location.location_id %>" class="btn edit-btn"><i class="far fa-edit"></i></a>
+            <form style="display: inline;" action="/locations/delete/<%= location.location_id %>" method="POST">
+              <button class="btn delete-btn" type="submit"><i class="fas fa-trash"></i></button>
+            </form>
+          </div>
+        </li>
+      <% }) %>
+    </ul>
+  </div>

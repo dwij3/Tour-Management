@@ -1,0 +1,35 @@
+<div class="form-container">
+    <h1>Add Location Details</h1>
+    <form action="/locations/add" method="POST">
+        <div class="form-row">
+            <div class="field">
+                <label for="lname">Location Name</label>
+                <input type="text" id="lname" name="locationname" placeholder="Enter Location Name">
+            
+            </div>
+            <div class="field">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" placeholder="Enter City Name">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="field">
+                <label for="district">District</label>
+                <input type="text" id="district" name="district" placeholder="Enter District Name">
+            
+            </div>
+            <div class="field">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder="Enter State Name">
+            </div>
+        </div>
+      
+        <div class="desc-row">
+            <label for="desc">Description</label>
+            <textarea id="desc" name="desc" placeholder="Enter Description" style="height:200px"></textarea>
+        </div>
+      
+  
+      <button class="submit-btn" type="submit" value="Add Location">Add Location</button>
+    </form>
+</div>
